@@ -99,6 +99,13 @@ export class HomeComponent implements OnInit {
       })
     console.log(priceFeed)
 
+    priceFeed.events['allEvents']()
+    .on("data", (event: any) => {
+      console.log(event)
+      console.log("Price Update Event:", event.returnValues);
+      // Access and use the updated price from event.returnValues
+    })
+
   }
 
 
