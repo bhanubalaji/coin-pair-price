@@ -26,9 +26,9 @@ export class HomeComponent implements OnInit {
     this.setupWebSocket();
     this.example()
     this.web3example();
-    setInterval(() => {
-      this.web3example();
-    }, 10000);
+    // setInterval(() => {
+    //   this.web3example();
+    // }, 10000);
     this.getHistoryData()
   }
   currentPriceByChain: any
