@@ -1,0 +1,19 @@
+<div>
+    <label for="coinPair">Select Coin Pair: </label>
+    <select id="coinPair" [(ngModel)]="selectedCoinPair" (change)="onSelectCoinPair()">
+      <option *ngFor="let pair of coinPairs" [value]="pair">{{ pair }}</option>
+    </select>
+  </div>
+  <div *ngIf="currentPrice">
+    <p>Current Price: {{ currentPrice | currency: 'USD': 'symbol' }}</p>
+  </div>
+
+  <hr>
+  <h1>chain link</h1>
+  <label for="coinPair">Select Coin Pair : </label>
+  <select id="coinPair" [(ngModel)]="selectedCoinPair1" (change)="web3example()">
+    <option *ngFor="let pair of coinPair1" [value]="pair.value">{{ pair?.key }}</option>
+  </select>
+  <div *ngIf="currentPriceByChain">
+    <p>Current Price :${{ currentPriceByChain }}</p>
+  <!-- </div> -->
