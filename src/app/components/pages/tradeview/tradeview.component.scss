@@ -1,0 +1,2816 @@
+@import"../../../../assets/fon-text/font.scss";
+$primarycolor: var( --primarycolor);
+$primary-bg:var( --primary-bg);
+$secondarycolor:var( --white-color);
+$sell-color:var(--secondarycolor);
+$iconcolor: var(--black-color);
+$defaultcolor: var(--sidenav-boxshadow);
+$boxshadow: var( --gray-txt);
+$slide-text: var( --gray-txt);
+$trade-btn-sell: var(--secondarycolor);
+$anticon-background:var( --light-gray);
+$text-color: var(--text-color);
+$validation-color:var( --validation-txt);
+$btcvalue: var( --gray-txt);
+$button-hover: var(--primary-hover-color);
+$sell-hover:var( --secondary-hover-color);
+$edit-popup: var( --light-gray);
+$card-bg:var(--card-bg);
+$close-btn-shadow:var( --close-btn);
+$next-btn:var( --next-btn-disible);
+$next-btn-border:var(--next-btn-border);
+$danger-color:var(--validation-txt);
+$input-bg:var( --input-box);
+.smarttrade {
+    position: relative;
+    &__title-txt {
+        font-size: $title-txt;
+        font-family: "GoogleSans-Bold";
+        color: $text-color;
+    }
+    // &__title-sub-txt {
+    //     color: $text-color;
+    //     font-family: "GoogleSans-Bold";
+    //     font-size: $sub-title-txt;
+    //     margin-top: 10px;
+    //     margin-right: 20px;
+    // }
+    &__sub-content {
+        display: flex;
+        text-align: center;
+        justify-content: space-between;
+        margin-right: 0px;
+    }
+    &__valid-txt {
+        color: var(--validation-txt);
+        font-size: 12px;
+        padding-left: 5px;
+    }
+    &__payment-txt {
+        margin-bottom: 5px;
+        padding-top: 20px;
+        padding-left: 4px;
+        color: $text-color;
+    }
+    // &__title-txt-order {
+    //     font-size: 30px;
+    //     padding-left: 50px;
+    //     margin-top: 30px;
+    //     font-family: "GoogleSans-Bold";
+    //     font-weight: 600;
+    //     color: $text-color;
+    // }
+    &__value {
+        font-family: "GoogleSans-Light";
+        margin-left: 30px;
+    }
+    &__subtitle {
+        text-align: right;
+        font-family: "GoogleSans-Bold";
+        margin-bottom: 10px;
+    }
+    &__subtitle-txt {
+        display: inline-flex;
+        text-align: right;
+        font-weight: 700;
+        margin-bottom: 0px;
+        color: $text-color;
+        font-size: $title-txt;
+        font-family: "GoogleSans-Bold";
+    }
+    &__subtitle-content {
+        font-weight: 750;
+        color: $slide-text;
+        font-family: "GoogleSans-Bold";
+    }
+    &__select-dropdown {
+        color: var(--text-color);
+        font-size: $sub-title-txt;
+        font-family: "GoogleSans-Light";
+        height: 25px;
+        margin-top: 7px;
+    }
+    &__priceChange {
+        color: var(--text-color);
+        font-size: $sub-title-txt;
+        margin-top: 7px;
+        font-family: "GoogleSans-Light";
+    }
+    &__view-tag {
+        text-decoration: none;
+        color: #bfbfbf;
+        font-weight: 500;
+        font-size: $description-txt;
+        font-family: "GoogleSans-Regular";
+    }
+    &__single-icon {
+        position: relative;
+        top: 2px;
+        left: -2px;
+    }
+    // &__double-icon {
+    //     position: relative;
+    //     top: 3px;
+    //     right: 7px;
+    // }
+    &__grid-icon {
+        position: relative;
+        top: 2px;
+        right: 7px;
+    }
+    // &__trading-chart {
+    //     width: 100%;
+    //     min-height: 384px;
+    // }
+    // &__buy-btn {
+    //     background-color: $primarycolor;
+    //     top: calc(40% - 35px);
+    //     width: 100px;
+    //     position: fixed;
+    //     font-family: "GoogleSans-Bold";
+    //     z-index: 10;
+    //     right: 0;
+    //     height: 70px;
+    //     font-size: $title-txt;
+    //     padding: 0;
+    //     border-radius: 10px 0px 0px 10px;
+    //     min-width: 123px;
+    //     border: 0px;
+    //     z-index: 110;
+    //     color: #ffffff;
+    //     transition-property: width;
+    //     transition-duration: 0.3s;
+    // }
+    // &__buy-btn:hover {
+    //     width: 150px;
+    //     background-color: $button-hover;
+    // }
+    // &__sell-btn {
+    //     background-color: $trade-btn-sell;
+    //     top: calc(40% + 50px);
+    //     width: 100px;
+    //     position: fixed;
+    //     z-index: 10;
+    //     right: 0;
+    //     height: 70px;
+    //     font-family: "GoogleSans-Bold";
+    //     font-size: $title-txt;
+    //     padding: 0;
+    //     border-radius: 10px 0px 0px 10px;
+    //     min-width: 123px;
+    //     border: 0px;
+    //     z-index: 110;
+    //     color: #ffffff;
+    //     transition-property: width;
+    //     transition-duration: 0.3s;
+    // }
+    // &__sell-btn:hover {
+    //     width: 150px;
+    //     background-color: $sell-hover;
+    // }
+    // &__order-btn {
+    //     background-color: #504D59;
+    //     top: calc(40% + 135px);
+    //     width: 100px;
+    //     position: fixed;
+    //     z-index: 10;
+    //     right: 0;
+    //     height: 70px;
+    //     font-family: "GoogleSans-Bold";
+    //     font-size: $title-txt;
+    //     padding: 0;
+    //     border-radius: 10px 0px 0px 10px;
+    //     min-width: 123px;
+    //     border: 0px;
+    //     z-index: 110;
+    //     color: #ffffff;
+    //     transition-property: width;
+    //     transition-duration: 0.3s;
+    // }
+    // &__order-btn:hover {
+    //     width: 150px;
+    //     background-color: #5c5964;
+    // }
+    // &__nav-bar {
+    //     margin-left: 115px;
+    //     margin-top: 10px;
+    // }
+    // &__nav-txt {
+    //     color: $defaultcolor;
+    //     font-weight: 500;
+    // }
+    &__table-head {
+        color: #cccdcd !important;
+        font-weight: 500;
+        font-family: "GoogleSans-Regular";
+        font-size: $description-txt;
+        padding: 10px 10px !important;
+        text-align: left;
+    }
+    // &__nav-list {
+    //     padding-left: 50px;
+    // }
+    // &__data-img {
+    //     margin-left: 660px;
+    // }
+    // &__data-txt {
+    //     margin-left: 660px;
+    //     color: $boxshadow;
+    //     font-weight: 500;
+    // }
+    &__table-data {
+        margin-left: 100px;
+        width: 80%;
+    }
+    // &__table-size {
+    //     width: 200px;
+    // }
+    // &__buy-fixing {
+    //     width: 500px !important;
+    // }
+    // &__reset-tag {
+    //     color: #bfbfbf;
+    //     font-size: $description-txt;
+    //     padding-top: 15px;
+    //     text-decoration: none;
+    //     font-family: "GoogleSans-Regular";
+    // }
+    // &__reset-tag:hover {
+    //     color: #bfbfbf;
+    // }
+    &__input-field {
+        border: none;
+        width: 100%;
+        box-shadow: none;
+        font-size: $description-txt;
+        font-family: "GoogleSans-Regular";
+        color: $text-color;
+        padding: 0px;
+        border-color: var(--input-box);
+        background-color: transparent !important;
+    }
+    // &__price-field {
+    //     border: none;
+    //     width: 186px;
+    //     box-shadow: none;
+    //     font-size: $title-txt;
+    //     color: $text-color;
+    //     padding: 0px;
+    //     max-width: 340px;
+    //     outline: none;
+    //     font-family: "GoogleSans-Bold";
+    //     background-color: var(--input-box);
+    // }
+    &__price-txt {
+        color: var(--gray-txt);
+        font-size: $sub-title-txt;
+        font-family: "GoogleSans-Light";
+        margin-top: 6px;
+        margin-right: 5px;
+    }
+    // &__sell-price-field {
+    //     border: none !important;
+    //     width: 30px;
+    //     font-size: $title-txt;
+    //     font-family: "GoogleSans-Bold";
+    //     box-shadow: none !important;
+    //     color: $text-color;
+    //     padding: 0px;
+    //     max-width: 340px;
+    //     outline: none !important;
+    //     background-color: var(--input-box);
+    // }
+    &__pay-txt {
+        font-family: "GoogleSans-Bold";
+        border: none !important;
+        outline: none !important;
+        box-shadow: none !important;
+        background-color: $card-bg;
+        height: 40px;
+    }
+    &__buy-content {
+        display: flex;
+        justify-content: space-between;
+        font-family: "GoogleSans-Bold";
+        color: var(--black-color);
+        margin-top: 8px;
+    }
+    &__buy-title {
+        font-size: $title-txt;
+        color: $iconcolor;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        font-family: "GoogleSans-Bold";
+    }
+    &__coin-txt {
+        margin-bottom: 18px;
+        font-size: $description-txt;
+        font-family: "GoogleSans-Regular";
+        color: $iconcolor;
+    }
+    // &__table-head {
+    //   // background-color: $secondarycolor;
+    //   color:$boxshadow;
+    // }
+    // &__add-btn {
+    //     background-color: $primarycolor;
+    //     border: none;
+    //     margin-right: 100px;
+    // }
+    &__select-txt {
+        font-size: $sub-title-txt;
+        font-family: "GoogleSans-Light";
+        width: 100%;
+        cursor: not-allowed;
+        background-color: transparent;
+        border: 1px solid var(--input-border);
+    }
+    &__fund-txt {
+        margin-bottom: 0px;
+        color: $iconcolor;
+        font-size: $description-txt;
+        font-family: "GoogleSans-Regular";
+    }
+    &__txt-content {
+        width: 100%;
+    }
+    &__txt-content-switch {
+        display: inline-flex;
+        width: 100%;
+    }
+    &__usdt-text {
+        margin-top: 12px;
+        color: #bfbfbf;
+        font-size: $sub-title-txt;
+        padding-left: 5px;
+        font-family: "GoogleSans-Light";
+    }
+    &__usdt-text1 {
+        margin-top: 8px;
+        color: #bfbfbf;
+        font-size: $sub-title-txt;
+        padding-left: 5px;
+        font-family: "GoogleSans-Light";
+    }
+    // &__level-btn {
+    //     margin-top: 20px;
+    //     display: inline-flex;
+    // }
+    &__percentage-btn {
+        color: #ffffff;
+        background-color: var(--radio-bg);
+        -ms-color: #ffffff;
+        -ms-background-color: var(--radio-bg);
+        border-radius: 30px;
+        font-size: $description-txt;
+        font-family: "GoogleSans-Regular";
+        border: none;
+        outline: none;
+        margin-top: 25px;
+        margin-left: 5px;
+    }
+    &__percentage-btn1 {
+        color: #ffffff;
+        background-color: var(--radio-bg);
+        -ms-color: #ffffff;
+        -ms-background-color: var(--radio-bg);
+        border-radius: 30px;
+        font-size: $description-txt;
+        font-family: "GoogleSans-Regular";
+        border: none;
+        outline: none;
+        margin-top: 25px;
+        margin-left: 0px;
+    }
+    &__radio-group {
+        margin-top: 10px;
+    }
+    &__order-txt {
+        font-size: $description-txt;
+        font-family: "GoogleSans-Regular";
+        margin-top: 0px;
+        color: $iconcolor;
+    }
+    &__limit-btn {
+        color: #ffffff;
+        background-color: var(--radio-bg);
+        font-size: $sub-title-txt;
+        font-family: "GoogleSans-Light";
+        border-radius: 30px;
+        border: none;
+        padding: 2px 19px;
+        margin-top: 12px;
+        margin-bottom: 5px;
+    }
+    &__openorder-cancel {
+        padding: 0px 9px 0px 9px !important;
+        height: 38px !important;
+    }
+    &__market-btn {
+        color: #ffffff;
+        background-color: var(--radio-bg);
+        border-radius: 30px;
+        margin-left: 10px;
+        font-size: $sub-title-txt;
+        font-family: "GoogleSans-Light";
+        border: none;
+        padding: 2px 19px;
+        margin-top: 12px;
+        margin-bottom: 5px;
+         ::before {
+            background-color: transparent;
+        }
+    }
+    // &__trade-txt {
+    //     font-weight: 500;
+    // }
+    // &__trade-set {
+    //     display: flex;
+    //     justify-content: space-between;
+    // }
+    // &__switch-btn {
+    //     justify-content: end;
+    //     text-align: right;
+    //     margin-left: 7rem;
+    // }
+    // &__switch-btn1 {
+    //     justify-content: end;
+    //     text-align: right;
+    //     margin-left: 7rem;
+    // }
+    &__stoploss-input {
+        box-shadow: unset !important;
+        border: none;
+        outline: none;
+        background: transparent;
+        font-size: $title-txt;
+        font-family: "GoogleSans-Bold";
+        padding: 0px;
+        color: var(--black-color);
+    }
+    // &__stoploss-fund {
+    //     width: 80px;
+    //     box-shadow: unset !important;
+    //     border: none;
+    //     outline: none;
+    //     background: transparent;
+    //     font-size: 1.5rem;
+    // }
+    &__stop-loss-validate-txt {
+        color: var(--validation-txt);
+        margin-left: 0px;
+        width: 100%;
+        font-size: $description-txt;
+        font-family: "GoogleSans-Regular";
+        margin-bottom: 0px;
+    }
+    // &__stoploss-postition {
+    //     margin-top: 10px;
+    //     margin-left: 50px;
+    // }
+    // &__stoploss-divider {
+    //     margin: 0px;
+    //     margin-left: 4rem;
+    //     width: 111%;
+    //     background-color: var(--divider);
+    // }
+    // &__trailing-postition {
+    //     margin-top: 35px;
+    //     margin-left: 37px;
+    // }
+    // &__profit-postition {
+    //     margin-top: -30px;
+    //     margin-left: 65px;
+    // }
+    // &__trailing-input {
+    //     box-shadow: unset !important;
+    //     border: none;
+    //     outline: none;
+    //     background: transparent;
+    //     font-size: 1.5rem;
+    // }
+    // &__profit-input {
+    //     box-shadow: unset !important;
+    //     border: none;
+    //     outline: none;
+    //     background: transparent;
+    //     font-size: 1.5rem;
+    // }
+    // &__clock-icon {
+    //     margin-top: 10px;
+    //     width: 30px;
+    //     height: 30px;
+    //     background: var(--radio-bg);
+    //     border-radius: 50%;
+    //     text-align: center;
+    //     line-height: 26px;
+    //     color: $secondarycolor;
+    // }
+    // &__sliders-icon {
+    //     margin-top: 35px;
+    //     width: 30px;
+    //     height: 30px;
+    //     background: $anticon-background;
+    //     border-radius: 50%;
+    //     text-align: center;
+    //     line-height: 26px;
+    //     color: $secondarycolor;
+    // }
+    // &__flag-icon {
+    //     margin-top: 25px;
+    //     width: 30px;
+    //     height: 30px;
+    //     background: var(--radio-bg);
+    //     border-radius: 50%;
+    //     text-align: center;
+    //     line-height: 26px;
+    //     color: $secondarycolor;
+    // }
+    // &__coin-icon {
+    //     text-align: center !important;
+    //     padding: 7px;
+    //     width: 30px;
+    //     height: 30px;
+    //     background: $primarycolor;
+    //     border-radius: 50%;
+    //     text-align: center;
+    //     line-height: 26px;
+    //     color: $secondarycolor;
+    // }
+    &__mainBTC-txt {
+        color: #ffffff;
+        padding-top: 25px;
+        margin-bottom: 5px;
+        font-size: $title-txt;
+        font-family: "GoogleSans-Bold";
+    }
+    &__multiple-takeprofit {
+        background-color: var(--confirm-btn);
+        margin-left: 10px;
+        margin-top: 3px;
+        border: none;
+    }
+    &__mainBTC-sub-txt {
+        color: $btcvalue;
+        font-family: "GoogleSans-Regular";
+        font-size: $description-txt;
+        padding-top: 10px;
+    }
+    &__fund-valid-txt {
+        color: $validation-color;
+        font-family: "GoogleSans-Regular";
+        font-size: $description-txt;
+    }
+    // &__buy-footer {
+    //     bottom: 30px;
+    //     width: 50%;
+    //     align-self: center;
+    //     position: absolute;
+    //     left: 28%;
+    // }
+    &__buy-button {
+        height: 35px;
+        width: 100%;
+        font-size: $sub-title-txt;
+        font-family: "GoogleSans-Bold";
+        border: 0px;
+        box-shadow: unset;
+        color: var(--buy-txt);
+        background-color: var(--buy-btn);
+    }
+    &__buy-button:enabled {
+        background: #00bcc7;
+        color: #ffffff;
+    }
+    &__content-box {
+        background-color: var(--confirm-btn);
+        width: 100%;
+        height: 100px;
+        border-radius: 10px;
+        text-align: center;
+    }
+    // &__box-txt {
+    //     color: $secondarycolor;
+    //     padding-top: 10px;
+    //     margin-bottom: 0;
+    // }
+    // &__sub-txt {
+    //     padding-top: 10px;
+    //     font-weight: 500px;
+    //     color: $slide-text;
+    // }
+    // &__drawer-box {
+    //     margin-top: 50px;
+    //     max-width: 340px;
+    // }
+    &__coin-balance {
+        padding-top: 20px;
+        padding-bottom: 60px;
+    }
+    &__coin-position {
+        padding: 15px;
+    }
+    &__coin-title {
+        margin: 0;
+        font-size: $description-txt;
+        font-family: "GoogleSans-Regular";
+        color: var(--black-color);
+    }
+    &__coin-content {
+        margin: 0;
+        color: $boxshadow;
+        font-size: $description-txt;
+        font-family: "GoogleSans-Regular";
+    }
+    &__coin-value {
+        padding-top: 10px;
+        float: right;
+        color: var(--black-color);
+        font-size: $description-txt;
+        font-family: "GoogleSans-Regular";
+    }
+    &__percentage {
+        margin-bottom: 0px;
+        margin-top: 10px;
+        font-size: $sub-title-txt;
+        color: $edit-popup;
+        font-family: "GoogleSans-Bold";
+    }
+    &__stoploss-input {
+        font-size: $description-txt;
+        font-family: "GoogleSans-Regular";
+    }
+    &__multiprofit-input {
+        font-family: "GoogleSans-Bold";
+        max-width: 340px;
+        border: 1px solid var(--input-border);
+        background-color: transparent;
+        height: 36px;
+        width: 215px;
+        border-radius: 50px;
+        color: var(--text-color);
+        margin-right: 20px;
+        // width: 50px;
+    }
+    &__multiprofit-form {
+        margin-left: 11px;
+    }
+    &__table-body {
+        font-family: "GoogleSans-Regular";
+        color: $iconcolor;
+        font-size: $description-txt;
+    }
+    &__sell-button {
+        height: 35px;
+        min-width: 100%;
+        font-size: 20px;
+        font-size: $sub-title-txt;
+        font-family: "GoogleSans-Bold";
+        border: 0px;
+        box-shadow: unset;
+        color: var(--buy-txt);
+        background-color: var(--buy-btn);
+    }
+    &__sell-button:enabled {
+        background: $trade-btn-sell;
+        color: #ffffff;
+    }
+    &__emptyVal-text {
+        color: $primarycolor !important;
+        background: $primary-bg !important;
+        border-radius: 5px !important;
+        font-family: "GoogleSans-Bold";
+        border: none !important;
+        padding: 5px !important;
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: $sub-title-txt !important;
+    }
+    // &__sellcoin-icon {
+    //     text-align: center !important;
+    //     padding: 7px;
+    //     width: 30px;
+    //     height: 30px;
+    //     background: $trade-btn-sell;
+    //     border-radius: 50%;
+    //     text-align: center;
+    //     line-height: 26px;
+    //     color: $secondarycolor;
+    // }
+    &__chart-selection {
+        background-color: var(--radio-bg);
+        margin: 0px 5px;
+        width: 36px;
+        height: 36px;
+        border: none;
+        box-shadow: none;
+        border-radius: 50px;
+    }
+    &__line-option {
+        background-color: var(--radio-bg);
+        margin: 0px 5px;
+        border: none;
+        box-shadow: none;
+        color: #ffffff;
+        border-radius: 50px;
+        height: 28px;
+        font-size: $description-txt;
+        font-family: "GoogleSans-Light";
+    }
+    &__tech-chart {
+        height: 384px;
+        margin-top: 10px;
+    }
+    &__tech-chart1 {
+        height: 250px;
+        margin-top: 20px;
+        margin-right: 10px;
+    }
+    &__tech-chart2 {
+        height: 250px;
+        margin-top: 20px;
+        margin-left: 10px;
+    }
+    &__addbot {
+        float: right;
+        background-color: $primarycolor;
+        border: 1px solid $primarycolor;
+        font-weight: 500;
+        font-family: "GoogleSans-Bold";
+        position: absolute;
+        z-index: 1;
+        right: 0;
+        top: 40px;
+        padding: 0 20px;
+        color: #fff;
+        left: 91.5%;
+        font-size: $sub-title-txt;
+        height: 36px;
+    }
+    &__addbot-disable {
+        float: right;
+        background-color: $edit-popup;
+        color: $secondarycolor;
+        border: 1px solid $primarycolor;
+        font-weight: 500;
+        font-family: "GoogleSans-Bold";
+        position: absolute;
+        z-index: 1;
+        right: 0;
+        top: 30px;
+    }
+    &__addbot:hover {
+        background-color: $primarycolor;
+        border: 1px solid $primarycolor;
+    }
+    &__sell {
+        float: right;
+        background-color: $trade-btn-sell;
+        color: #ffffff;
+        border: none;
+        font-size: $sub-title-txt;
+        font-family: "GoogleSans-Light";
+        position: absolute;
+        z-index: 1;
+        right: 20%;
+        top: 35px;
+        font-size: $sub-title-txt;
+    }
+    // &__history {
+    //     float: right;
+    //     background-color: $primarycolor;
+    //     border: 1px solid $primarycolor;
+    //     font-weight: 500;
+    //     font-family: "GoogleSans-Bold";
+    //     position: absolute;
+    //     z-index: 1;
+    //     right: 0;
+    //     top: 30px;
+    //     left: 95%;
+    //     font-size: $title-txt;
+    //     height: 36px;
+    //     padding: 0 20px;
+    // }
+    // &__history:hover {
+    //     background-color: $button-hover;
+    //     border: 1px solid $button-hover;
+    // }
+    // &__table-data {
+    //     font-family: "GoogleSans-Bold";
+    //     color: $text-color;
+    // }
+    &__value-txt {
+        color: $primarycolor;
+    }
+    &__coin {
+        cursor: pointer;
+    }
+    &__edit-popup {
+        color: $edit-popup;
+    }
+    &__edit-dropdown {
+        width: 228px;
+        padding: 16px;
+    }
+    &__edit-dropdown-limit {
+        width: 276px;
+        padding: 16px;
+    }
+    &__edit-txt {
+        display: inline-flex;
+    }
+    &__input-box {
+        border-radius: 50px;
+        width: 100px;
+        background: transparent !important;
+        color: var(--text-color);
+        font-size: $sub-title-txt;
+        font-family: "GoogleSans-Regular";
+    }
+    &__input-group {
+        border-radius: 50px;
+        width: 100px;
+        height: 40px;
+        background: transparent !important;
+        color: var(--text-color);
+        font-size: $sub-title-txt;
+        font-family: "GoogleSans-Regular";
+        border: 1px solid var(--input-border);
+    }
+    &__input-group-limit {
+        border-radius: 50px;
+        width: 150px;
+        height: 40px;
+        background: transparent !important;
+        color: var(--text-color);
+        font-size: $sub-title-txt;
+        font-family: "GoogleSans-Regular";
+        border: 1px solid var(--input-border);
+    }
+    &__trailing-txt {
+        margin-bottom: 10px;
+        padding-right: 7px;
+        color: var(--text-color);
+        font-size: $sub-title-txt;
+        font-family: "GoogleSans-Light";
+    }
+    &__percent {
+        margin-left: 7px;
+        font-family: "GoogleSans-Bold";
+        color: $text-color;
+        margin-top: 10px;
+    }
+    &__save-btn {
+        border: none;
+        margin-left: 7px;
+        height: 40px;
+        font-size: $sub-title-txt;
+        font-family: "GoogleSans-Light";
+        padding: 6px 8px;
+    }
+    &__save-btn:enabled {
+        background-color: $primarycolor;
+        color: #ffffff;
+    }
+    &__cancel-btn {
+        background-color: $edit-popup;
+        color: $secondarycolor;
+        font-size: $sub-title-txt;
+        font-family: "GoogleSans-Light";
+        border: none;
+        margin-right: 7px;
+    }
+    &__popup-btn {
+        display: inline-flex;
+    }
+    &__start-btn {
+        color: #ffffff;
+        background-color: $primarycolor;
+        font-family: "GoogleSans-Bold";
+        border: none;
+        font-size: $title-txt;
+        margin-right: 5px;
+        padding: 2px 23px;
+        margin-top: 15px;
+        min-width: 90px;
+    }
+    &__renew-btn {
+        color: $secondarycolor;
+        background-color: $text-color;
+        font-size: $sub-title-txt;
+        font-family: "GoogleSans-Light";
+        border: none;
+        margin-right: 5px;
+        margin-top: 15px;
+        min-width: 90px;
+    }
+    &__setting-dropdown {
+        border: 1px solid transparent;
+        background-color: var(--secondarycolor) !important;
+        color: red;
+        border-radius: 50%;
+        padding: 9px 15px;
+        margin-left: 10px;
+        font-size: $title-txt;
+        width: 40px;
+        height: 40px;
+    }
+    &__setting-dropdown-bot {
+        background-color: var(--radio-bg);
+        color: $secondarycolor;
+        border-radius: 50%;
+        padding: 9px 12px;
+        margin-left: 10px;
+        font-size: $title-txt;
+        width: 36px;
+        height: 36px;
+        display: inline-block;
+    }
+    &__close-btn {
+        border: 0px;
+        width: 60px;
+        height: 60px;
+        border-radius: 30px 0px 0px 30px;
+        background-color: $secondarycolor;
+        box-shadow: -30px 13px 30px $close-btn-shadow;
+        position: fixed;
+        right: 478px;
+        padding: 10px;
+        z-index: 0;
+        visibility: visible;
+    }
+    &__model-heading {
+        font-weight: 600;
+        margin-bottom: 0;
+        color: $text-color;
+        font-family: "GoogleSans-Bold";
+    }
+    &__model-sub-heading {
+        font-weight: 600;
+        margin-bottom: 0;
+        color: $text-color;
+    }
+    &__model-sub-content {
+        color: $boxshadow;
+    }
+    &__payment-txt {
+        margin-bottom: 5px;
+        padding-top: 20px;
+        padding-left: 4px;
+        color: $text-color;
+        font-family: "GoogleSans-Light";
+        font-size: $description-txt;
+    }
+    &__select-coin {
+        margin-left: 4px;
+        width: 310px;
+        color: $text-color;
+        font-family: "GoogleSans-Bold";
+    }
+    &__Subscription-txt {
+        margin-bottom: 5px;
+        padding-top: 0px;
+        padding-left: 4px;
+        font-family: "GoogleSans-Light";
+        font-size: $description-txt;
+        color: $text-color;
+    }
+    &__select-month {
+        margin-left: 4px;
+        width: 310px;
+        color: $text-color;
+        font-family: "GoogleSans-Bold";
+    }
+    &__txt-box {
+        margin-left: 0px;
+        // width: 310px;
+        height: 30px;
+        background-color: transparent;
+        border: 1px solid var(--input-border);
+        color: #fff;
+        display: block;
+    }
+    &__coupon-txt1 {
+        margin-bottom: 5px;
+        padding-top: 20px;
+        padding-left: 4px;
+        font-weight: 500;
+        color: $text-color;
+    }
+    &__coupon-txt {
+        margin-bottom: 5px;
+        padding-top: 20px;
+        padding-left: 4px;
+        font-family: "GoogleSans-Light";
+        font-size: $description-txt;
+        color: $text-color;
+    }
+    &__coupon-input {
+        height: 40px;
+        background: transparent !important;
+        font-family: "GoogleSans-Light";
+        font-size: $description-txt;
+        color: $text-color;
+        width: 315px;
+    }
+    &__model-btn {
+        margin-top: 35px;
+    }
+    &__validation-txt {
+        margin-left: 10px !important;
+    }
+    &__next-btn {
+        background-color: $next-btn;
+        border: 1px solid $next-btn-border;
+        color: $boxshadow;
+        font-size: $sub-title-txt;
+        font-family: "GoogleSans-Light";
+        font-family: "GoogleSans-Bold";
+    }
+    // &__next-btn:hover {
+    //     background-color: $text-color;
+    //     border: 1px solid $text-color;
+    //     color: $secondarycolor;
+    //     height: 36px;
+    //     font-weight: 500;
+    //     font-size:$sub-title-txt;
+    //     font-family: "GoogleSans-Light";
+    // }
+    &__serch-box-table {
+        background-color: transparent !important;
+        color: var(--text-color);
+        font-size: $description-txt;
+        border: none;
+        box-shadow: none;
+        font-family: "GoogleSans-Regular";
+        margin-bottom: 20px;
+        height: 20px;
+    }
+    &__text-box-search-table {
+        background-color: transparent !important;
+        color: var(--text-color);
+        font-size: $title-txt;
+        border: 1px solid var(--input-border);
+        box-shadow: none;
+        height: 30px;
+        margin-bottom: 15px;
+    }
+    &__search-table-icon {
+        position: relative;
+        bottom: 0px;
+    }
+    &__next-btn:enabled {
+        background-color: $text-color;
+        border: 1px solid $text-color;
+        color: $secondarycolor;
+        font-size: $sub-title-txt;
+        font-family: "GoogleSans-Light";
+    }
+    &__cancel-btn-bot {
+        margin-left: 20px;
+        color: $text-color;
+        background-color: $secondarycolor;
+        font-family: "GoogleSans-Light";
+        border: 1px solid $edit-popup;
+        font-size: $sub-title-txt;
+    }
+    &__cancel-btn-bot:hover {
+        color: $validation-color;
+        border: 1px solid $validation-color;
+    }
+    &__cancel-btn-popup {
+        margin-left: 8px;
+        background-color: var(--radio-bg);
+        border: none;
+        color: $text-color;
+        font-size: $title-txt;
+        height: 40px;
+        font-size: 14px;
+        font-family: "GoogleSans-Light";
+        padding: 6px 8px;
+    }
+    &__cancel-btn-popup-limit {
+        margin-left: 5px;
+        background-color: var(--radio-bg);
+        border: none;
+        color: $text-color;
+        font-size: $title-txt;
+        height: 40px;
+        font-size: 14px;
+        font-family: "GoogleSans-Light";
+        padding: 6px 8px;
+    }
+    &__cancel-btn-coming {
+        margin-left: 256px;
+        margin-top: 30px;
+        background-color: $secondarycolor;
+        border: 1px solid $boxshadow;
+        color: $text-color;
+        height: 32px;
+        font-size: $sub-title-txt;
+        font-family: "GoogleSans-Light";
+    }
+    &__cancel-btn-coming:hover {
+        background-color: $secondarycolor;
+        border: 1px solid $danger-color;
+        color: $danger-color;
+        font-size: $sub-title-txt;
+        font-family: "GoogleSans-Light";
+    }
+    // &__card-row {
+    //     padding-left: 90px;
+    // }
+    &__pagination {
+        margin-left: 90px;
+    }
+    &__input-box1 {
+        background-color: $input-bg;
+        width: 100%;
+        border: none;
+    }
+    &__qrcode {
+        text-align: center;
+        font-family: "GoogleSans-Bold";
+        color: $text-color;
+        margin-top: 10px;
+        h4 {
+            padding-top: 10px;
+            color: var(--black-color);
+        }
+        img {
+            border: 1px solid $edit-popup;
+        }
+    }
+    &__para-txt {
+        text-align: center;
+        font-family: "GoogleSans-Bold";
+        color: #7c7c7c;
+        padding-top: 10px;
+    }
+    &__result-title {
+        font-family: "GoogleSans-Bold";
+        color: $text-color;
+        font-size: $title-txt;
+        margin-top: 12px;
+    }
+    &__result-table {
+        font-family: "GoogleSans-Bold";
+        color: $defaultcolor;
+    }
+    &__edit-model-title {
+        font-family: "GoogleSans-Bold";
+        color: $text-color;
+        font-size: $title-txt;
+        margin-top: 11px;
+    }
+    &__stop-loss {
+        padding-top: 20px;
+        font-family: "GoogleSans-Light";
+        color: var(--black-color);
+        font-size: $description-txt;
+    }
+    &__fund-txt {
+        padding: 0px 0;
+        margin-bottom: 18px;
+        font-family: "GoogleSans-Light";
+        font-size: $description-txt;
+    }
+    &__fund-txt-model {
+        margin-top: 15px;
+        color: $iconcolor;
+        margin-bottom: 8px;
+        font-family: "GoogleSans-Light";
+        font-size: $description-txt;
+    }
+    &__order-txt {
+        padding-top: 15px;
+        font-family: "GoogleSans-Regular";
+    }
+    &__profit-txt-add {
+        font-size: $description-txt !important;
+        font-family: "GoogleSans-Regular";
+        margin-bottom: 0px;
+    }
+    &__Limit-model-btn {
+        color: #ffffff;
+        background-color: $edit-popup;
+        font-family: "GoogleSans-Light";
+        border: none;
+        font-size: $description-txt;
+        // border-radius: 26px;
+        border-radius: 50px !important;
+    }
+    &__Market-model-btn {
+        color: #ffffff;
+        background-color: $edit-popup;
+        font-family: "GoogleSans-Light";
+        border: none;
+        font-size: $description-txt;
+        border-radius: 26px;
+        margin-left: 10px;
+    }
+    &__save-model-btn {
+        margin-top: 20px;
+        color: $secondarycolor;
+        background-color: $text-color;
+        font-family: "GoogleSans-Light";
+        border: none;
+        font-size: $sub-title-txt;
+    }
+    &__save-model-btn:enabled {
+        margin-top: 20px;
+        color: #fff;
+        background-color: var(--primarycolor);
+        font-family: "GoogleSans-Light";
+        border: none;
+        font-size: $sub-title-txt;
+    }
+    &__cancel-model-btn {
+        margin-top: 20px;
+        color: $text-color;
+        background-color: $secondarycolor;
+        font-family: "GoogleSans-Light";
+        border: 1px solid $edit-popup;
+        font-size: $sub-title-txt;
+    }
+    &__cancel-model-btn:hover {
+        color: $validation-color;
+        border: 1px solid $validation-color;
+    }
+    &__input-box-model {
+        height: 30px;
+        background-color: transparent;
+        color: var(--black-color);
+        border: 1px solid var(--input-border);
+        font-size: $description-txt;
+    }
+    &__input-field-model {
+        height: 40px;
+        background-color: transparent;
+        color: var(--black-color);
+        border: 1px solid var(--input-border);
+        font-size: $description-txt;
+    }
+    &__value-txt {
+        color: $primarycolor;
+    }
+    &__table-time {
+        color: $edit-popup;
+    }
+    &__openorder-date {
+        color: $edit-popup;
+    }
+    // &__current-value {
+    //     color: $trade-btn-sell;
+    //     box-sizing: border-box;
+    //     margin: 9px 8px 0 0;
+    //     font-variant: tabular-nums;
+    //     list-style: none;
+    //     font-feature-settings: "tnum";
+    //     display: inline-block;
+    //     height: auto;
+    //     padding: 0 7px;
+    //     font-size: $description-txt;
+    //     line-height: 7px;
+    //     white-space: nowrap;
+    //     border-radius: 2px;
+    //     cursor: default;
+    //     transition: all 0.3s;
+    //     border-radius: 5px;
+    //     font-family: "GoogleSans-Regular";
+    // }
+    &__current-value-auto {
+        color: $trade-btn-sell;
+        box-sizing: border-box;
+        margin: 9px 8px 0 0;
+        font-variant: tabular-nums;
+        list-style: none;
+        font-feature-settings: "tnum";
+        display: inline-block;
+        height: auto;
+        padding: 10px 10px;
+        font-size: $description-txt;
+        line-height: 7px;
+        white-space: nowrap;
+        border-radius: 2px;
+        cursor: default;
+        transition: all 0.3s;
+        font-family: "GoogleSans-Regular";
+        border-radius: 5px;
+        font-family: "GoogleSans-Regular";
+    }
+    // &__profit-txt {
+    //     color: $primarycolor;
+    // }
+    &__limit-btn-table {
+        background-color: var(--confirm-btn);
+        font-family: "GoogleSans-Light";
+        color: #ffffff;
+        font-size: $sub-title-txt;
+    }
+    &__edit-btn-table {
+        background-color: var(--confirm-btn);
+        font-family: "GoogleSans-Light";
+        color: #ffffff;
+        margin-right: 10px;
+        font-size: $sub-title-txt;
+        padding: 5px 20px !important;
+    }
+    &__market-btn-table {
+        background-color: var(--confirm-btn);
+        font-family: "GoogleSans-Light";
+        color: #ffffff;
+        margin-left: 10px;
+        font-size: $sub-title-txt;
+    }
+    &__menu {
+        font-family: "GoogleSans-Bold";
+    }
+    &__drawer-box {
+        position: relative;
+    }
+    &__sellall-txt {
+        padding-top: 3px;
+        color: var(--black-color);
+        font-family: "GoogleSans-Bold";
+        font-size: $title-txt;
+    }
+    &__sellall-sub-txt {
+        font-family: "GoogleSans-Regular";
+        font-size: $description-txt;
+    }
+    &__sellall-btn {
+        float: right;
+    }
+    &__sellall-cancelbtn {
+        background-color: $secondarycolor;
+        border: 1px solid $edit-popup;
+        color: $text-color;
+        margin-right: 5px;
+        box-shadow: none;
+        font-size: $sub-title-txt;
+        font-family: "GoogleSans-Light";
+    }
+    &__sellall-model-btn {
+        background-color: $trade-btn-sell;
+        color: #ffffff;
+        border: none;
+        box-shadow: none;
+        font-size: $sub-title-txt;
+        font-family: "GoogleSans-Light";
+    }
+    // &__buy-takeprofit {
+    //     margin-top: 4px;
+    // }
+    &__drop-addtarget {
+        background-color: var(--radio-bg);
+        border-radius: 50px;
+        color: #ffffff;
+        padding: 22px 22px;
+        margin-left: 10px;
+        width: 36px;
+        height: 36px;
+    }
+    &__downarrow-icon {
+        position: relative;
+        right: 10px;
+        bottom: 7px;
+    }
+    &__dropdown-arrow {
+        position: relative;
+        bottom: 9px;
+        right: 11px;
+    }
+    &__add-trade-profit {
+        text-align: center;
+        display: flex;
+        justify-content: space-between;
+        margin: 20px 0px 0 10px;
+    }
+    &__add-button {
+        background-color: var(--confirm-btn);
+        border: none;
+        outline: none;
+        margin-left: 10px;
+    }
+    &__input-add-box {
+        border: 1px solid var(--input-border);
+        background-color: transparent;
+        height: 36px;
+        width: 70px;
+        border-radius: 50px;
+        color: var(--text-color);
+        margin-right: 20px;
+    }
+    &__drop-limit {
+        padding: 16px;
+    }
+    &__input-limit-box {
+        background-color: transparent;
+        font-family: "GoogleSans-Regular";
+        color: var(--text-color);
+        font-size: $description-txt;
+    }
+    &__input-limit-group {
+        background-color: transparent;
+        font-family: "GoogleSans-Regular";
+        color: var(--text-color);
+        font-size: $description-txt;
+        margin: 5px 0;
+        border: 1px solid var(--input-border);
+        height: 40px;
+        border-radius: 50px;
+    }
+    &__save-btn-add {
+        background-color: var(--primarycolor);
+        color: #ffffff;
+        font-size: $sub-title-txt;
+        border: none;
+        margin-right: 15px;
+    }
+    &__delete-btn-add {
+        color: #ffffff;
+        font-size: $sub-title-txt;
+        background-color: #383838;
+        border: none;
+        margin-right: 10px;
+    }
+    &__table-card {
+        background-color: var(--card-bg);
+        border-radius: 10px;
+    }
+    &__limit-value-txt {
+        font-family: "GoogleSans-Regular";
+        color: var(--text-color);
+        font-size: $description-txt;
+    }
+    &__Usdt-limit-txt {
+        font-family: "GoogleSans-Regular";
+        color: $edit-popup;
+        font-size: $description-txt;
+    }
+    &__take-profit-model {
+        color: var(--text-color);
+        font-family: "GoogleSans-Regular";
+        font-size: $description-txt;
+        margin: 10px 0;
+    }
+    &__cancel-btn-limit {
+        background-color: transparent;
+        border: 1px solid $text-color;
+        color: $text-color;
+        font-family: "GoogleSans-Light";
+        margin-left: 20px;
+        font-size: $sub-title-txt;
+    }
+    &__cancel-btn-limit:hover {
+        border: 1px solid $trade-btn-sell;
+        color: $trade-btn-sell;
+    }
+    &__submit-btn-limit {
+        background-color: $text-color;
+        font-family: "GoogleSans-Light";
+        color: $secondarycolor;
+        font-size: $sub-title-txt;
+        margin-top: 10px;
+    }
+    &__botresult {
+        font-family: "GoogleSans-Bold";
+    }
+    &__setting-list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 1px auto;
+        color: #fff;
+    }
+    &__coinlist-downarrow {
+        position: relative;
+        bottom: 3px;
+    }
+    &__pay-txt {
+        background-color: transparent;
+        color: var(--black-color);
+    }
+    &__data-button {
+        display: flex;
+    }
+    &__table-txt {
+        padding: 10px !important;
+    }
+    &__serch-box {
+        background-color: transparent !important;
+        color: var(--text-color);
+        font-size: $description-txt;
+        border: none;
+        box-shadow: none;
+        font-family: "GoogleSans-Regular";
+    }
+    &__text-box {
+        background-color: transparent !important;
+        width: 312px;
+        color: var(--text-color);
+        font-size: $title-txt;
+        box-shadow: none;
+        float: right;
+        position: absolute;
+        left: 81%;
+        top: 35px;
+        border: 1px solid var(--input-border);
+    }
+    &__serch-box1 {
+        background-color: transparent !important;
+        width: 100px;
+        color: var(--text-color);
+        font-size: $description-txt;
+        border: none;
+        box-shadow: none;
+        font-family: "GoogleSans-Regular";
+    }
+    &__text-box1 {
+        background-color: transparent !important;
+        width: 150px;
+        color: var(--text-color);
+        font-size: $title-txt;
+        border: none !important;
+        box-shadow: none;
+        margin-bottom: 10px;
+    }
+    // &__buy-drawer-btn{
+    //     background-color:$primarycolor;
+    //     color: #ffffff;
+    //     font-size:$sub-title-txt;
+    //     font-family: "GoogleSans-Light";
+    //     padding: 6px 30px;
+    //     margin-right:10px;
+    //     border: none;
+    //     margin-top: 5px;
+    //     height: 36px;
+    // }
+    &__table-style {
+        width: 100%;
+    }
+    // &__sell-drawer-btn{
+    //     background-color:var(--secondarycolor);
+    //     color: #ffffff;
+    //     font-size:$sub-title-txt;
+    //     font-family: "GoogleSans-Light";
+    //     padding: 6px 35px;
+    //     border: none;
+    //     margin-right:10px;
+    //     margin-top: 5px;
+    //     height: 36px;
+    // }
+    // &__orderbook-drawer-btn{
+    //     background-color:#504D59;
+    //     color: #ffffff;
+    //     font-size:$sub-title-txt;
+    //     font-family: "GoogleSans-Light";
+    //     border: none;
+    //     margin-top: 5px;
+    //     height: 36px;
+    // }
+    &__coin-list {
+        border-radius: 50px;
+        background-color: var(--radio-bg);
+        font-family: "GoogleSans-Light";
+        color: #ffffff;
+        font-size: $description-txt;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        padding: 1px 16px;
+        height: 30px;
+    }
+    &__coin-pair {
+        display: flex;
+        margin: 3px 0;
+    }
+    &__downarrow-list {
+        position: relative;
+        bottom: 5px;
+    }
+    &__downarrow-graph {
+        position: relative;
+        bottom: 12px !important;
+    }
+    &__coin-list-arrow {
+        position: relative;
+        bottom: 5px;
+    }
+    &__coin-list-value {
+        color: $primarycolor;
+        font-family: "GoogleSans-Regular";
+        font-size: $description-txt;
+    }
+    &__value-chart {
+        color: $primarycolor;
+        font-family: "GoogleSans-Regular";
+        font-size: $description-txt;
+        height: 54px;
+    }
+    &__chart-list {
+        display: flex;
+    }
+    &__orderbook-title {
+        font-family: "GoogleSans-Light";
+        color: var(--text-color);
+        font-size: $sub-title-txt;
+        margin-top: 15px;
+    }
+    &__chart-option {
+        display: flex;
+    }
+    &__line-option-list {
+        float: right;
+    }
+    &__checkbox {
+        display: flex;
+    }
+    &__agreement {
+        color: #ffffff;
+        font-size: $description-txt;
+        font-family: "GoogleSans-Light";
+        margin-left: 10px;
+    }
+}
+
+.market-card {
+    padding: 40px;
+}
+
+.addbot-model {
+    text-align: center;
+}
+
+.subscribe-btn {
+    background-color: $primarycolor;
+    color: #1C1B20;
+    font-family: "GoogleSans-Light";
+    border: none;
+    font-size: $sub-title-txt;
+    height: 36px;
+    line-height: 28px;
+    padding: 0 20px;
+}
+
+.card-para {
+    color: $slide-text;
+    font-family: "GoogleSans-Light";
+    text-align: center;
+    font-size: $description-txt;
+    font-family: "GoogleSans-Regular";
+}
+
+.bot-title {
+    font-family: "GoogleSans-Bold";
+    text-align: center;
+    color: $text-color;
+}
+
+.historyselect {
+    float: right;
+    border-radius: 36px;
+    font-weight: 500;
+    font-family: "GoogleSans-Bold";
+    position: absolute;
+    z-index: 1;
+    right: 175px;
+    top: 30px;
+    left: 85%;
+    font-size: $title-txt;
+    height: 36px;
+    padding: 0 20px;
+}
+
+.coin-txt1 {
+    font-size: $description-txt;
+    color: var(--text-color);
+    font-family: "GoogleSans-Regular";
+    // cursor: pointer;
+}
+
+.coin-txt2 {
+    font-size: $description-txt;
+    color: var(--gray-txt);
+    font-family: "GoogleSans-Regular";
+    // cursor: pointer;
+}
+
+.coin-txt-total {
+    font-size: $description-txt;
+    color: var(--text-color);
+    font-family: "GoogleSans-Regular";
+    text-align: right;
+}
+
+.profit-color-price {
+    color: var(--text-color);
+    margin-left: 5px;
+    font-size: $description-txt;
+    width: 50%;
+    font-family: "GoogleSans-Regular";
+}
+
+@media screen and (max-width: 425px) {
+    .smarttrade {
+        &__subtitle {
+            text-align: left;
+        }
+        &__subtitle-txt {
+            margin-top: 0;
+        }
+        &__table-title {
+            padding-left: 0px;
+        }
+        &__trading-chart {
+            padding-top: 30px;
+            height: 500px;
+        }
+        &__trade-btn {
+            top: calc(40% + 10px);
+        }
+        &__trade-btn:hover {
+            width: 123px;
+        }
+        &__trade-btn1 {
+            top: calc(40% + 50px);
+        }
+        &__trade-btn1:hover {
+            width: 123px;
+        }
+        &__close-btn {
+            right: 274px !important;
+        }
+        &__switch-btn {
+            margin-left: 4rem;
+        }
+        &__switch-btn1 {
+            margin-left: 4.5rem;
+        }
+        &__history {
+            left: 0;
+            position: static;
+        }
+        &__addbot {
+            left: 0;
+            position: static;
+        }
+        &__mainBTC-txt {
+            font-size: 22px;
+        }
+        &__search-icon {
+            left: 0;
+            position: static;
+        }
+        &__sell {
+            left: 0;
+            position: static;
+        }
+        &__table-style {
+            margin-top: 50px;
+        }
+        &__table-value-primary {
+            font-family: "OpenSans-SemiBold";
+            color: var(--primarycolor);
+            padding: 20px 0;
+        }
+        &__table-value {
+            font-family: "OpenSans-SemiBold";
+            color: var(--text-color);
+            padding: 20px 0;
+        }
+        &__tech-chart3 {
+            margin-left: 15px;
+        }
+        &__tech-chart4 {
+            margin-left: 15px;
+        }
+        &__text-box {
+            position: relative;
+            top: 1%;
+            width: 159px;
+            left: 0%;
+        }
+    }
+    .page-btn {
+        margin-left: 34px !important;
+    }
+    .historyselect {
+        left: 0;
+        position: static;
+    }
+    .order-book-txt {
+        padding: 0px !important;
+    }
+    .sell-order-book {
+        margin-left: 0px !important;
+    }
+    .card-banner {
+        margin: 20px 0px 20px 0px !important;
+    }
+    .card-bg-sub {
+        margin: 0px 0px !important;
+    }
+    .card-bg-sub-content {
+        margin: 20px 0px 0px !important;
+    }
+    .card-bg-sub-table {
+        margin: 10px 0px !important;
+    }
+    .card-buy-sell {
+        margin: 40px 0px !important;
+    }
+    .card-table {
+        margin: 60px 0px 0px 0px!important;
+    }
+}
+
+@media (min-width: 1281px) {
+    .smarttrade {
+        &__stoploss-postition {
+            margin-left: 52px;
+        }
+        &__close-btn {
+            right: 479px !important;
+        }
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .smarttrade {
+        &__close-btn {
+            right: 245px !important;
+        }
+        &__switch-btn {
+            margin-left: 3rem;
+        }
+        &__switch-btn1 {
+            margin-left: 3.4rem;
+        }
+        &__stoploss-divider {
+            width: 100%;
+        }
+        &__select-coin {
+            width: 250px;
+        }
+        &__select-month {
+            width: 250px;
+        }
+        &__txt-box {
+            width: 250px;
+        }
+        &__sub-model {
+            margin-left: 10px;
+        }
+        &__qr-model {
+            padding-left: 15px;
+        }
+        &__title-sub-txt {
+            margin-left: 20px;
+        }
+        &__tech-chart3 {
+            margin-left: 15px;
+        }
+        &__tech-chart4 {
+            margin-left: 15px;
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .smarttrade {
+        &__stoploss-postition {
+            margin-left: 34px;
+        }
+        &__history {
+            left: 0;
+            position: static;
+        }
+        &__addbot {
+            left: 0;
+            position: static;
+        }
+        &__text-box {
+            margin-top: 20px;
+            left: 77%;
+            top: 55px;
+            width: 133px;
+        }
+        &__search-table-icon {
+            bottom: 0px;
+        }
+        &__sell {
+            left: 0;
+            position: static;
+        }
+        &__switch-btn {
+            margin-left: 9.9rem;
+        }
+        &__switch-btn1 {
+            margin-left: 10rem;
+        }
+        &__subtitle {
+            padding-right: 0px !important;
+        }
+    }
+    .historyselect {
+        left: 0;
+        position: static;
+    }
+    .card-banner {
+        margin: 20px 0px 20px 0px !important;
+    }
+    .card-bg-sub {
+        margin: 0px 0px !important;
+    }
+    .card-bg-sub-content {
+        margin: 0px 0px 0px 20px !important;
+    }
+    .card-bg-sub-table {
+        margin: 10px 0px !important;
+    }
+    .card-buy-sell {
+        margin: 20px 0px !important;
+    }
+    .card-table {
+        margin: 40px 0px 0px 0px!important;
+    }
+}
+
+@media (min-width: 900px) and (max-width: 1440px) {
+    .historyselect {
+        left: 78%;
+    }
+    .smarttrade {
+        &__history {
+            left: 90%;
+        }
+        &__addbot {
+            left: 91%;
+            top: 35px;
+        }
+        &__sell {
+            left: 70%;
+        }
+        &__save-btn-add {
+            margin-right: 20px;
+        }
+        &__text-box {
+            left: 78% !important;
+            width: 254px !important;
+        }
+    }
+}
+
+.profit-color {
+    color: #00bcc7 !important;
+    margin-left: 5px;
+    font-family: "GoogleSans-Regular";
+    font-size: $description-txt;
+}
+
+.profit-color-current-price {
+    color: #00bcc7 !important;
+    font-family: "OpenSans-SemiBold";
+    font-size: $title-txt;
+}
+
+.profit-color-value {
+    color: #00bcc7!important;
+    margin-left: 5px;
+    font-family: "GoogleSans-Regular";
+    font-size: $description-txt;
+    text-align: left;
+    cursor: pointer;
+}
+
+.loss-color-value {
+    color: $sell-color !important;
+    margin-left: 5px;
+    font-family: "GoogleSans-Regular";
+    font-size: $description-txt;
+    cursor: pointer;
+}
+
+.loss-color {
+    color: $sell-color !important;
+    margin-left: 5px;
+    font-family: "GoogleSans-Regular";
+    font-size: $description-txt;
+}
+
+.loss-color-price {
+    color: $sell-color !important;
+    font-family: "OpenSans-SemiBold";
+    font-size: $title-txt;
+}
+
+.profit-color-currentprice {
+    color: #00bcc7!important;
+    font-family: "OpenSans-SemiBold";
+    font-size: $title-txt;
+}
+
+.loss-colorr {
+    fill: $sell-color;
+    margin-left: 5px;
+}
+
+.stop-warning {
+    background-color: $sell-color;
+    font-size: $sub-title-txt;
+    font-family: "GoogleSans-Light";
+}
+
+.start-success {
+    background-color: $primarycolor;
+    font-size: $sub-title-txt;
+    font-family: "GoogleSans-Light";
+}
+
+.draw-layout {
+    height: calc(100vh - 112px);
+    justify-content: space-between;
+}
+
+.disable_cursor {
+    cursor: not-allowed;
+}
+
+.error-warning {
+    color: $danger-color;
+}
+
+.page-btn {
+    margin-left: 83%;
+    margin-top: 2%;
+    display: inline-flex;
+}
+
+.trade-preview-btn {
+    border: none !important;
+    outline: none !important;
+    background-color: $edit-popup;
+    box-shadow: none !important;
+    padding: 1px 9px;
+    font-weight: 700;
+    font-size: 23px;
+    border-radius: 50%;
+    img {
+        position: relative;
+        bottom: 3px;
+    }
+}
+
+.trade-next-btn {
+    border: none !important;
+    outline: none !important;
+    background-color: $edit-popup;
+    box-shadow: none !important;
+    margin-left: 10px;
+    padding: 1px 9px;
+    font-weight: 700;
+    font-size: 23px;
+    border-radius: 50%;
+    img {
+        position: relative;
+        bottom: 3px;
+    }
+}
+
+.result-data {
+    font-family: "GoogleSans-Bold";
+    margin-top: 12px;
+    padding-right: 10px;
+}
+
+.position-table {
+    th {
+        width: 170px;
+    }
+}
+
+.openOrder-table {
+    th {
+        width: 270px;
+    }
+}
+
+.data-btn {
+    width: 230px !important;
+}
+
+.no-data-available {
+    text-align: center;
+    margin: 3% 0%;
+}
+
+.data-action-size {
+    display: flex;
+}
+
+// .coin-list-balance{
+//   width: 100%;
+// }
+// .view-all-tag {
+//     float: right;
+//     cursor: pointer;
+//     text-decoration: none;
+//     font-style: italic !important;
+//     outline: none !important;
+//     font-size: $description-txt;
+//     color: var(--gray-txt);
+// }
+.pagenation {
+    float: right;
+}
+
+.card-heading {
+    margin-top: 5px;
+    color: var(--black-color);
+    font-size: $sub-title-txt;
+    font-family: "GoogleSans-Bold";
+}
+
+.stop-loss-txt {
+    color: $iconcolor;
+    font-size: $description-txt;
+    font-family: "GoogleSans-Regular";
+}
+
+.input-field {
+    background-color: transparent;
+    font-size: $description-txt;
+    border: 1px solid var(--input-border);
+    margin-top: 15px;
+}
+
+.order-book-txt {
+    padding: 24px;
+    h2 {
+        margin-top: 10px;
+        color: var(--text-color);
+        font-size: $title-txt;
+        font-family: "GoogleSans-Bold";
+    }
+}
+
+.table-title {
+    padding: 0px 10px;
+    color: var(--text-color);
+    font-size: $description-txt;
+    font-family: "GoogleSans-Regular";
+    text-align: left;
+}
+
+.coin-table {
+    padding: 10px 0 !important;
+    color: #c6c6c8;
+    font-size: $description-txt;
+    font-family: "GoogleSans-Regular";
+    width: 50%;
+    font-weight: normal;
+}
+
+.coin-table-last {
+    color: #c6c6c8;
+    font-size: $description-txt;
+    font-family: "GoogleSans-Regular";
+    width: 50%;
+    font-weight: normal;
+    text-align: right;
+}
+
+.coin-table-orderbook {
+    padding: 10px 0px;
+    color: #c6c6c8;
+    font-size: $description-txt;
+    font-family: "GoogleSans-Regular";
+    width: 200px;
+    font-weight: normal;
+}
+
+.coin-table-orderbook1 {
+    padding: 10px 0px;
+    color: #c6c6c8;
+    font-size: $description-txt;
+    font-family: "GoogleSans-Regular";
+    width: 40%;
+    font-weight: normal;
+}
+
+.coin-table-orderbook2 {
+    padding: 10px 0px;
+    color: #c6c6c8;
+    font-size: $description-txt;
+    font-family: "GoogleSans-Regular";
+    font-weight: normal;
+    text-align: right;
+    width: 80px;
+}
+
+.coin-table-orderbook-data {
+    padding: 10px 0px;
+    color: #c6c6c8;
+    font-size: $description-txt;
+    font-family: "GoogleSans-Regular";
+    font-weight: normal;
+    text-align: right;
+    width: 70px;
+}
+
+.table-bg-profit {
+    background-color: #14393f;
+}
+
+.table-bg-loss {
+    background-color: #451c2c;
+}
+
+.table-data-profit {
+    font-size: $description-txt;
+    color: var(--primarycolor);
+    font-family: "GoogleSans-Regular";
+    text-align: left;
+    padding-top: 5px;
+    padding: 0px 10px;
+}
+
+.table-data-loss {
+    font-size: $description-txt;
+    color: var(--secondarycolor);
+    font-family: "GoogleSans-Regular";
+    text-align: left;
+    padding-top: 5px;
+    padding: 0px 10px;
+}
+
+.table-data {
+    font-size: $description-txt;
+    color: var(--text-color);
+    font-family: "GoogleSans-Regular";
+    text-align: left;
+    padding-top: 5px;
+    padding: 0px 10px;
+}
+
+.table-card {
+    background-color: var(--card-bg);
+    border-radius: 10px !important;
+    text-align: left;
+    padding: 10px 10px;
+}
+
+.table-data-loss-card {
+    font-size: $description-txt;
+    color: var(--black-color);
+    font-family: "GoogleSans-Regular";
+    text-align: left;
+    padding-top: 5px;
+    padding: 10px 10px;
+    border-radius: 10px 0 0 10px;
+}
+
+.table-data-card {
+    font-size: $description-txt;
+    color: var(--text-color);
+    font-family: "GoogleSans-Regular";
+    text-align: left;
+    padding-top: 5px;
+    padding: 10px 10px;
+}
+
+.table-data-card1 {
+    font-size: $description-txt;
+    color: var(--text-color);
+    font-family: "GoogleSans-Regular";
+    text-align: left;
+    padding-top: 5px;
+    padding: 10px 10px;
+    border-radius: 0px 10px 10px 0px;
+}
+
+.viewall-tag {
+    float: right;
+    color: var(--gray-txt);
+    cursor: pointer;
+    font-family: "GoogleSans-Regular";
+    font-size: $description-txt;
+    font-style: italic;
+    margin-right: 5px;
+}
+
+.viewall-tag-arrow {
+    color: var(--gray-txt);
+    cursor: pointer;
+    font-family: "GoogleSans-Regular";
+    font-size: $description-txt;
+    font-style: italic;
+    margin-left: 50%;
+    position: relative;
+    top: 38px;
+    right: 44px;
+}
+
+.view-all-tag {
+    color: var(--gray-txt);
+    cursor: pointer;
+    font-family: "GoogleSans-Regular";
+    font-size: $description-txt;
+    font-style: italic;
+    margin-left: 50%;
+    position: relative;
+    right: 64px;
+}
+
+@media (min-width:1441px) and (max-width: 1860px) {
+    .smarttrade {
+        &__text-box {
+            left: 81% !important;
+            width: 270px !important;
+        }
+    }
+}
+
+@media (min-width:800px) and (max-width: 1280px) {
+    .smarttrade {
+        &__text-box {
+            left: 78% !important;
+            width: 232px !important;
+        }
+    }
+    .order-book-txt {
+        padding: 24px 7px;
+    }
+}
+
+.open_order {
+    color: var(--text-color) !important;
+}
+
+.display_flex {
+    display: flex;
+}
+
+.badge_align {
+    padding-left: 7%;
+}
+
+.deletebtn {
+    background: transparent !important;
+    border: none;
+    color: #7c7c7c;
+    padding-left: 0;
+}
+
+.text_center {
+    text-align: center;
+}
+
+.others {
+    position: relative;
+    color: #ffffff;
+    bottom: 7px;
+    left: 2px;
+    font-size: $title-txt;
+}
+
+.tabset-btn {
+    text-align: center;
+}
+
+.fund-input-field {
+    background-color: transparent !important;
+    border: 1px solid var(--input-border);
+    font-size: $description-txt;
+    font-family: "GoogleSans-Regular";
+    height: 40px;
+}
+
+.fund-inputgroup-field {
+    background-color: transparent;
+    border: 1px solid var(--input-border);
+    font-size: $description-txt;
+    font-family: "GoogleSans-Regular";
+    height: 40px;
+    margin-top: 12px;
+}
+
+.stoploss-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--text-color);
+    font-size: $description-txt;
+    width: 100%;
+    margin-top: 20px;
+    font-family: "GoogleSans-Light";
+}
+
+.progress-bar {
+    opacity: 0.65;
+    position: absolute;
+    z-index: 0;
+    right: 0px;
+    background-color: var(--table-bg);
+    height: 20px;
+}
+
+.progress-bg {
+    cursor: pointer !important;
+}
+
+.ask-progress-bar {
+    opacity: 0.65;
+    position: absolute;
+    z-index: 0;
+    left: 0px;
+    background-color: var(--table-loss-bg);
+    height: 20px;
+    cursor: pointer;
+}
+
+.table-align-data {
+    text-align: right;
+    color: var(--text-color);
+    font-size: $description-txt;
+    font-family: "GoogleSans-Regular";
+    width: 50%;
+}
+
+.table-coinlist-data {
+    width: 50%;
+}
+
+.table-scroll-content {
+    overflow: auto;
+    overflow-x: hidden;
+    &::-webkit-scrollbar-track {
+        border-radius: 10px;
+        background-color: var(--scroll-bg);
+    }
+    &::-webkit-scrollbar {
+        width: 0px;
+        background-color: var(--scroll-bg);
+    }
+    &::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background-color: var(--scroll-bg);
+    }
+}
+
+.table-tag {
+    width: 100% !important;
+}
+
+.card-bg {
+    background-color: var(--card-bg);
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.card-banner {
+    background-color: var(--card-bg);
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    width: 100%;
+    padding: 24px;
+    margin-bottom: 10px;
+}
+
+.card-bg-sub {
+    background-color: var(--card-bg);
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    height: 100%;
+}
+
+.card-bg-sub-content {
+    background-color: var(--card-bg);
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    margin-right: 0px;
+    margin-bottom: 10px;
+    height: 100%;
+}
+
+.card-bg-sub-table {
+    background-color: var(--card-bg);
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    margin-right: 0px;
+    margin-bottom: 10px;
+    height: 98.5%;
+    margin-top: 10px;
+}
+
+.card-buy-sell {
+    background-color: var(--card-bg);
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    margin-right: 0px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    height: 100%;
+}
+
+.card-table {
+    background-color: var(--card-bg);
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    margin-top: 10px;
+    height: 100%;
+}
+
+.coinlist-table {
+    cursor: pointer;
+}
+
+.coinlist-table:hover {
+    background-color: var(--table-hover);
+}
+
+.static-txt {
+    color: var(--text-color);
+    font-size: $sub-title-txt;
+    font-family: "GoogleSans-Light";
+    margin: 7px 0 0 10px;
+}
+
+// .static-txt-price{
+//     margin: 7px 0 10px 10px;
+// }
+.static-txt-price {
+    color: var(--text-color);
+    font-size: $title-txt;
+    font-family: "OpenSans-SemiBold";
+    margin: 7px 0 10px 10px;
+}
+
+.coinlist-table-data {
+    position: sticky;
+    top: 0;
+    background-color: var(--card-bg);
+}
+
+.arrow-up {
+    margin-top: -5px;
+}
+
+.arrow-down {
+    margin-top: -5px;
+}
+
+@keyframes fab {
+    0% {
+        opacity: 0.6;
+        height: 0px;
+        width: 0px;
+    }
+    30% {
+        opacity: 0.3;
+        height: 25px;
+        width: 25px;
+    }
+    40% {
+        opacity: 0.1;
+        height: 45px;
+        width: 45px;
+    }
+    100% {
+        height: 65px;
+        width: 65px;
+        opacity: 0;
+    }
+}
+
+.ripple {
+    animation-name: fab;
+    animation-duration: 1.5s;
+    border-radius: 50%;
+    animation-iteration-count: infinite;
+    transform: translate(-50%, -50%);
+    background: var(--primarycolor);
+    animation-timing-function: ease-out;
+    position: absolute;
+    top: -20px;
+}
+
+.fab {
+    background-color: transparent;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    display: flex;
+    cursor: pointer;
+}
+
+.fab p {
+    margin: auto;
+    color: white;
+    font-size: 12px;
+}
+
+.fab-button {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+}
+
+.arrow-drownicon {
+    margin-left: 5px;
+}
+
+.multiple-txt {
+    color: var(--text-color);
+    font-size: $description-txt;
+    display: block;
+    margin-top: 15px;
+    font-family: "GoogleSans-Regular";
+}
+
+.multiple-select-txt {
+    font-size: $sub-title-txt;
+    font-family: "GoogleSans-Light";
+    width: 140px;
+    background-color: transparent;
+    border: 1px solid var(--input-border);
+    margin-right: 4px;
+    margin-top: 10px;
+    color: var(--text-color);
+}
+
+.multiple-input-txt {
+    font-size: $sub-title-txt;
+    font-family: "GoogleSans-Light";
+    width: 140px;
+    background-color: transparent;
+    border: 1px solid var(--input-border);
+    margin-right: 4px;
+    margin-top: 10px;
+    color: var(--text-color);
+    height: 34px;
+}
+
+.add-button {
+    background-color: var(--confirm-btn);
+    border: none;
+    outline: none;
+    margin-left: 10px;
+}
+
+.validation-txt {
+    color: var(--validation-txt);
+    font-size: $description-txt;
+    // margin-top:-12px;
+}
+
+.fund-txt {
+    padding: 0px 0;
+    margin-bottom: 18px;
+    font-family: "GoogleSans-Light";
+    font-size: $description-txt;
+    color: var(--text-color);
+}
+
+.multipleTakeprofit {
+    width: 100%;
+    background-color: #4846465e;
+    .actionColoum {
+        display: flex;
+    }
+}
+
+.arrow-right {
+    position: relative;
+    bottom: 20px;
+}
+
+.validation-txt-profit {
+    color: var(--validation-txt);
+    font-size: $description-txt;
+    width: 135px;
+    position: relative;
+    bottom: 20px;
+}
+
+@media (min-width: 1441px) and (max-width: 1679px) {
+    .smarttrade {
+        &__text-box {
+            left: 82% !important;
+            width: 213px !important;
+        }
+    }
+}
+
+.funde {
+    display: flex;
+    justify-content: space-between;
+    &__fund-txt {
+        font-size: 12px;
+        color: #959595;
+    }
+}
+
+.taker {
+    display: flex;
+    justify-content: space-between;
+    color: #fff !important;
+    font-family: "GoogleSans-Light";
+    margin-top: 15px;
+    &__fund-txt {
+        font-size: 12px;
+        color: var(--gray-txt) !important;
+    }
+}
+
+.volumemain {
+    display: block;
+    width: 100%;
+    &__first {
+        display: flex;
+    }
+    &__second {
+        display: flex;
+    }
+}
+
+.d-flex {
+    display: flex;
+}
+
+.first {
+    display: flex;
+    justify-content: space-between;
+    h3 {
+        color: #7b7a7a;
+        margin-bottom: 2px;
+        font-size: 12px;
+        font-family: "GoogleSans-Light";
+    }
+    p {
+        color: #fff;
+        margin-bottom: 1px;
+        font-size: 12px;
+        font-family: "GoogleSans-Regular";
+        text-align: left;
+    }
+}
+
+.mainsection {
+    width: 150px;
+    margin-left: 10px;
+}
+
+.second {
+    display: flex;
+}
+
+.gray-text {
+    color: var(--gray-txt) !important;
+}
+
+.volumesection {
+    min-width: 137px;
+    margin-left: 10px;
+    text-align: left;
+}
+
+.coinpairsection {
+    min-width: 80px;
+    margin-left: 10px;
+    text-align: left;
+}
+
+.sortarrow {
+    cursor: pointer;
+    display: inline-block;
+    img {
+        &:hover {
+            filter: brightness(9);
+        }
+    }
+}
+.sortarrow-changes {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    margin-left: .3rem;
+    img {
+        &:hover {
+            filter: brightness(9);
+        }
+    }
+}
+.d-flex {
+    display: flex;
+}
