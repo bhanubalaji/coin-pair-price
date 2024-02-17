@@ -7,18 +7,23 @@ import { HomeComponent } from './components/pages/home/home.component';
 import { FormsModule } from '@angular/forms';
 import { TradeviewComponent } from './components/pages/tradeview/tradeview.component';
 // import { TradingViewModule } from 'ngx-tradingview';
+import { HttpClientModule } from '@angular/common/http';
+import { ChartsviewComponent } from './components/pages/chartsview/chartsview.component';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    TradeviewComponent
+    TradeviewComponent,
+    ChartsviewComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule
     // TradingViewModule
   ],
   providers: [],
